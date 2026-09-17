@@ -1,0 +1,4 @@
+# Apenas a entrada da aplicação é pública na raiz. Código e credenciais
+# continuam bloqueados; public/ de cada aplicação tem sua própria autorização.
+Options -Indexes
+Require expr "%{REQUEST_URI} =~ m#^/financapessoal/?(?:index\.php)?$#"

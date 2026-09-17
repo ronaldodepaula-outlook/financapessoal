@@ -1,0 +1,2 @@
+<dialog id="modal" class="modal"><div class="modal-header"><div><p class="eyebrow" id="modal-eyebrow">Organize seu financeiro</p><h2 id="modal-title">Novo registro</h2></div><button type="button" class="icon-button" id="modal-close" aria-label="Fechar janela"><?= icon('close') ?></button></div><div id="modal-body"></div></dialog>
+<div id="toast" role="status" aria-live="polite" class="toast" hidden></div>

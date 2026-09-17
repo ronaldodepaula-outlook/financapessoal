@@ -1,0 +1,9 @@
+<?php require dirname(__DIR__).'/components/icons.php'; ?>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title><?= e($definition['title']) ?> · Finança Pessoal</title><link rel="icon" href="<?= e($base) ?>/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="<?= e($base) ?>/assets/css/app.css"></head>
+<body><a href="#main" class="skip-link">Ir para o conteúdo</a><?php require dirname(__DIR__).'/components/sidebar.php'; ?><div class="app-shell"><?php require dirname(__DIR__).'/components/header.php'; ?><main id="main" class="main-content">
+  <div class="page-heading"><div><p class="eyebrow"><?= e($page==='dashboard'?'CADA ESCOLHA CONTA':$definition['group']) ?></p><h1><?= e($definition['title']) ?></h1><p class="page-subtitle" id="page-subtitle"><?= e($page==='dashboard'?'Mais clareza para cuidar do que importa.':'Tudo organizado para você decidir com tranquilidade.') ?></p></div><div id="page-actions" class="page-actions"></div></div>
+  <div id="page-content" aria-live="polite"><div class="loading"><span class="spinner"></span>Carregando seu financeiro…</div></div>
+  <footer class="page-footer"><span>finança. <span class="muted">Seu planejamento começa aqui.</span></span><span>Valores em reais · BRL</span></footer>
+</main></div><?php require dirname(__DIR__).'/components/modal.php'; ?>
+<script type="application/json" id="app-config"><?= json_encode(['base'=>$base,'page'=>$page,'definition'=>$definition,'csrf'=>$_SESSION['csrf'],'today'=>date('Y-m-d'),'year'=>(int)date('Y'),'month'=>(int)date('m')],JSON_HEX_TAG|JSON_HEX_AMP|JSON_HEX_APOS|JSON_HEX_QUOT|JSON_UNESCAPED_UNICODE) ?></script>
+<script src="<?= e($base) ?>/assets/vendor/chart.umd.js" defer></script><script src="<?= e($base) ?>/assets/js/app.js" type="module"></script></body></html>

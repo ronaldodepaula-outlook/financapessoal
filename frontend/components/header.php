@@ -1,0 +1,4 @@
+<header class="topbar">
+  <div class="topbar-left"><button class="icon-button mobile-menu" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><?= icon('menu') ?></button><span><?= e($definition['group']) ?></span><span class="breadcrumb-separator">/</span><strong><?= e($definition['title']) ?></strong></div>
+  <div class="topbar-user"><span class="local-status"><i></i>Meu financeiro</span><span class="avatar"><?= e(mb_strtoupper(mb_substr($user['name']??'U',0,1))) ?></span><span class="user-name"><?= e(explode(' ',$user['name']??'Usuário')[0]) ?></span><form action="<?= e($base) ?>/?page=logout" method="post"><input type="hidden" name="_csrf" value="<?= e($_SESSION['csrf']) ?>"><button class="icon-button" title="Sair" aria-label="Sair da conta"><?= icon('logout') ?></button></form></div>
+</header>

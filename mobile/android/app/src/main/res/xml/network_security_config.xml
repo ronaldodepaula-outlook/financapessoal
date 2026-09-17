@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  O backend roda em HTTP puro (sem TLS) na rede local, então o Android
+  bloquearia todo tráfego por padrão a partir da API 28 (Network Security
+  Config). Aqui liberamos cleartext SOMENTE para o IP do servidor
+  (src/constants/config.ts), mantendo bloqueado para qualquer outro host.
+-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">192.168.1.9</domain>
+    </domain-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

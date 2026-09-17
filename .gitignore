@@ -1,0 +1,13 @@
+**/vendor/
+**/node_modules/
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.testing.example
+**/.phpunit.result.cache
+**/.phpunit.cache/
+**/storage/logs/*.log
+**/storage/sessions/*
+!**/storage/sessions/.gitignore
+**/database/*.sqlite*
+/.local/

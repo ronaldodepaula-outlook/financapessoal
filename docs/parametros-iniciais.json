@@ -1,0 +1,44 @@
+{
+  "status": "aguardando_configuracao_por_usuario",
+  "currency": "BRL",
+  "income_is_net_of_payroll_loan": null,
+  "income_schedules": [
+    {"description": "Renda primeira quinzena", "amount": "3780.00", "period": "01_15", "day": null, "active": false},
+    {"description": "Renda segunda quinzena", "amount": "2700.00", "period": "16_31", "day": null, "active": false}
+  ],
+  "payroll_loan": {
+    "principal_amount": "17000.00",
+    "installments": 24,
+    "installment_amount": "1024.77",
+    "interest_rate": "2.5400",
+    "cet": "2.7900",
+    "annual_cet": "39.0500",
+    "iof": "530.18",
+    "reported_start_month": "2026-10",
+    "reported_end_month": "2028-10",
+    "first_due_date": null,
+    "status": "RASCUNHO"
+  },
+  "budget_years": [2027, 2028],
+  "monthly_budget_targets": [
+    {"category": "Alimentação", "subcategory": "Supermercado", "planned_amount": "2400.00"},
+    {"category": "Alimentação", "subcategory": "Alimentação fora", "planned_amount": "600.00"},
+    {"category": "Transporte", "subcategory": null, "planned_amount": "800.00"},
+    {"category": "Saúde", "subcategory": null, "planned_amount": "250.00"},
+    {"category": "Assinaturas", "subcategory": null, "planned_amount": "200.00"},
+    {"category": "Outros", "subcategory": null, "planned_amount": "500.00"},
+    {"category": "Financeiro", "subcategory": "Consignado", "planned_amount": "1024.77"}
+  ],
+  "fixed_expenses_budget": null,
+  "categories": {
+    "Alimentação": ["Supermercado", "Alimentação fora"],
+    "Transporte": ["Combustível", "Uber/99", "Estacionamento"],
+    "Moradia": ["Água", "Energia", "Internet"],
+    "Telefonia": ["Claro"],
+    "Assinaturas": ["Streaming", "Software"],
+    "Saúde": ["Farmácia"],
+    "Educação": [], "Lazer": [], "Vestuário": [],
+    "Financeiro": ["Consignado", "Tarifas", "Juros"],
+    "Outros": []
+  }
+}

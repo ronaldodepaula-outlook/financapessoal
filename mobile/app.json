@@ -1,0 +1,16 @@
+{
+  "name": "MobileApp",
+  "displayName": "Finança Pessoal",
+  "expo": {
+    "name": "Finança Pessoal",
+    "slug": "financa-pessoal-mobile",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.mobileapp"
+    },
+    "plugins": [
+      "expo-secure-store"
+    ]
+  }
+}

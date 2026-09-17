@@ -1,0 +1,6 @@
+{
+  "name": "financa-pessoal-ui",
+  "private": true,
+  "scripts": {"build": "node tools/build.mjs"},
+  "devDependencies": {"tailwindcss": "4.3.3", "@tailwindcss/cli": "4.3.3", "chart.js": "4.5.1", "swagger-ui-dist": "5.32.15", "@fontsource/manrope": "5.3.0"}
+}

@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {execFileSync} from 'node:child_process';
+const root=path.resolve(import.meta.dirname,'..');
+const copy=(from,to)=>{fs.mkdirSync(path.dirname(to),{recursive:true});fs.copyFileSync(from,to);};
+execFileSync(process.execPath,[path.join(root,'node_modules/@tailwindcss/cli/dist/index.mjs'),'-i',path.join(root,'styles/app.css'),'-o',path.join(root,'public/assets/css/app.css'),'--minify'],{stdio:'inherit'});
+copy(path.join(root,'node_modules/chart.js/dist/chart.umd.js'),path.join(root,'public/assets/vendor/chart.umd.js'));
+for(const weight of [400,500,600,700,800])copy(path.join(root,`node_modules/@fontsource/manrope/files/manrope-latin-${weight}-normal.woff2`),path.join(root,`public/assets/fonts/manrope-${weight}.woff2`));
+for(const file of ['swagger-ui.css','swagger-ui-bundle.js','swagger-ui-standalone-preset.js'])copy(path.join(root,'node_modules/swagger-ui-dist',file),path.join(root,'../backend/public/docs/assets',file));
+copy(path.join(root,'../backend/docs/openapi.json'),path.join(root,'../backend/public/docs/openapi.json'));
+console.log('CSS, fontes, gráficos e documentação copiados para os diretórios públicos.');

@@ -1,0 +1,10 @@
+Require all granted
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^login/?$ index.php?page=login [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z-]+)/?$ index.php?page=$1 [QSA,L]
+</IfModule>
